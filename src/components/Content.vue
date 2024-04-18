@@ -23,8 +23,8 @@ export default {
     this.handleIndexResume();
   },
   methods: {
-    handleIndexResume: function (id) {
-      axios.get(`http://localhost:3000/students/${id}.json`).then((response) => {
+    handleIndexResume: function () {
+      axios.get(`http://localhost:3000/students.json`).then((response) => {
         console.log("students index", response);
         this.students = response.data;
       });
@@ -36,7 +36,7 @@ export default {
 <template>
   <main>
     <h1>Welcome to Vue!</h1>
-    <IndexResume />
+    <IndexResume v-bind:students="students" />
 
     <!-- <ShowResume /> -->
   </main>

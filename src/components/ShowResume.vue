@@ -1,28 +1,31 @@
 <script>
 export default {
   props: {
-    student: Object,
+    students: Object,
   },
 };
 </script>
 
 <template>
   <div>
-    <h1>Resume information</h1>
-
-    <p>Photo: {{ student.photo }}</p>
-    <h2>Name: {{ (student.first_name, student.last_name) }}</h2>
-
-    <p>Email: {{ student.email }}</p>
-    <p>Phone: {{ student.phone_number }}</p>
-    <p>Website: {{ student.website_url }}</p>
-    <p>Linkedin: {{ student.linkedin_url }}</p>
-    <p>Twitter: {{ student.twitter_handle }}</p>
-    <p>Github: {{ student.github_url }}</p>
-
-    <p>Bio: {{ student.short_bio }}</p>
-
-    <p>Resume: {{ student.resume_url }}</p>
+    <div>
+      <h1>{{ student.first_name }} {{ student.last_name }}</h1>
+      <h2>
+        <img v-bind:src="student.photo" alt="" />
+        <br />
+      </h2>
+      <h3>Information</h3>
+      <p>
+        <i>
+          {{ student.phone_number }} ● {{ student.email }} ● {{ student.linkedin_url }} ● {{ student.github_url }} ●
+          {{ student.website_url }}
+        </i>
+      </p>
+      <h3>Summary</h3>
+      <p>
+        {{ student.short_bio }}
+      </p>
+    </div>
   </div>
 </template>
 
