@@ -2,14 +2,12 @@
   todo
 1. get backend 
 2. finish index convert to show 
-vue router
  -->
 
 <script>
 import axios from "axios";
 import ShowResume from "./ShowResume.vue";
 import IndexResume from "./IndexResume.vue";
-import { createRouter } from "vue-router";
 
 export default {
   components: {
@@ -36,12 +34,22 @@ export default {
 </script>
 
 <template>
+  <h1>Hello App!</h1>
+  <p>
+    <strong>Current route path:</strong>
+    {{ $route.fullPath }}
+  </p>
+
+  <main></main>
+</template>
+<!-- 
+<template>
   <main>
     <h1>Welcome to Vue!</h1>
     <IndexResume v-bind:students="students" />
 
-    <!-- <ShowResume /> -->
+    <ShowResume />
   </main>
-</template>
+</template> -->
 
 <style></style>
