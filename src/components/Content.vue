@@ -2,12 +2,14 @@
   todo
 1. get backend 
 2. finish index convert to show 
+vue router
  -->
 
 <script>
 import axios from "axios";
 import ShowResume from "./ShowResume.vue";
 import IndexResume from "./IndexResume.vue";
+import { createRouter } from "vue-router";
 
 export default {
   components: {

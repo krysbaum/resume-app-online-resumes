@@ -6,6 +6,7 @@
       <a href="#">Home</a>
       |
       <a href="#">Link</a>
+      |
     </nav>
   </header>
 </template>
