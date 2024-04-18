@@ -3,10 +3,8 @@
 <template>
   <header>
     <nav>
-      <a href="#">Home</a>
-      |
-      <a href="#">Link</a>
-      |
+      <RouterLink to="/">Go to Home</RouterLink>
+      <RouterLink to="/about">Go to About</RouterLink>
     </nav>
   </header>
 </template>

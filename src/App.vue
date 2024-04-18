@@ -1,13 +1,11 @@
 <script>
 import Header from "./components/Header.vue";
-import Content from "./components/Content.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    Content,
     Footer,
   },
 };
@@ -16,7 +14,7 @@ export default {
 <template>
   <div>
     <Header />
-    <Content />
+    <RouterView />
     <Footer />
   </div>
 </template>
