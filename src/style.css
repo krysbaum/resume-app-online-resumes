@@ -1,3 +1,28 @@
 html {
   scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+}
+Header{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+
+  align-items: right;
+}
+
+.All-Students{
+  font-family: "Courier New", Courier, monospace;
+  
+
+}
+.Bio{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+
+}
+
+.Student-Information{
+  display: flex;
+  justify-content: center;
 }

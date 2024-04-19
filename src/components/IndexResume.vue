@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div Class="All-Students">
     <h1>All Students</h1>
     <div v-for="student in students" v-bind:key="student.id">
       <a v-bind:href="'/students/' + student.id">
