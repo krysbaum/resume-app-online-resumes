@@ -1,21 +1,34 @@
-<script>
+<script setup>
+import { ref, onMounted } from "vue";
 import axios from "axios";
+import { useScriptTag } from "@vueuse/core";
 
-export default {
-  props: {
-    students: Object,
-  },
-};
+useScriptTag("https://platform.twitter.com/widgets.js");
+
+// Define a reactive reference for the student data
+const student = ref({});
+
+// Define the function to fetch student data
+function handleShowResume() {
+  axios.get("http://localhost:3000/students/3.json").then((response) => {
+    console.log("students show", response);
+    student.value = response.data; // Update the reactive reference
+  });
+}
+
+// Call the function when the component is mounted
+onMounted(() => {
+  handleShowResume();
+});
 </script>
 
 <template>
   <div>
     <div>
-      <h1>{{ student.first_name }} {{ student.last_name }}</h1>
-      <h2>
-        <img v-bind:src="student.photo" alt="" />
-        <br />
-      </h2>
+      <h1>
+        <img height="100" v-bind:src="student.photo" alt="" />
+        {{ student.first_name }} {{ student.last_name }}
+      </h1>
       <h3>Information</h3>
       <p>
         <i>
@@ -27,6 +40,7 @@ export default {
       <p>
         {{ student.short_bio }}
       </p>
+      <a class="twitter-timeline" href="https://twitter.com/concernedape?ref_src=twsrc%5Etfw"></a>
     </div>
   </div>
 </template>
