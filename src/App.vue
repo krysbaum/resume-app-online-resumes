@@ -24,3 +24,9 @@ export default {
 </template>
 
 <style></style>
+<!-- installed vue router
+npm install vue-router@4
+
+installed this
+npm i @vueuse/core
+-->

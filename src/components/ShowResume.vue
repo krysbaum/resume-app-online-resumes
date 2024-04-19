@@ -23,19 +23,19 @@ onMounted(() => {
 <template>
   <div>
     <div>
-      <h1>
+      <h1 class="Student-img">
         <img height="100" v-bind:src="student.photo" alt="" />
         {{ student.first_name }} {{ student.last_name }}
       </h1>
       <h3>Information</h3>
-      <p>
+      <p Class="Student-Information">
         <i>
           {{ student.phone_number }} ● {{ student.email }} ● {{ student.linkedin_url }} ● {{ student.github_url }} ●
           {{ student.website_url }}
         </i>
       </p>
       <h3>Summary</h3>
-      <p>
+      <p container>
         {{ student.short_bio }}
       </p>
       <p>
@@ -50,4 +50,11 @@ onMounted(() => {
   </div>
 </template>
 
-<style></style>
+<style>
+.Student-Information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: red;
+}
+</style>

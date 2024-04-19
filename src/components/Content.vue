@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <main>
+  <main container>
     <IndexResume v-bind:students="students" />
   </main>
 </template>
