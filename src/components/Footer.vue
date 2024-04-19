@@ -2,7 +2,7 @@
 
 <template>
   <footer>
-    <p>Copyright 2024</p>
+    <p><i>Copyright 2024</i></p>
   </footer>
 </template>
 
