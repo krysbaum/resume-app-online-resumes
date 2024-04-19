@@ -34,22 +34,9 @@ export default {
 </script>
 
 <template>
-  <h1>Hello App!</h1>
-  <p>
-    <strong>Current route path:</strong>
-    {{ $route.fullPath }}
-  </p>
-
-  <main></main>
-</template>
-<!-- 
-<template>
   <main>
-    <h1>Welcome to Vue!</h1>
     <IndexResume v-bind:students="students" />
-
-    <ShowResume />
   </main>
-</template> -->
+</template>
 
 <style></style>

@@ -14,6 +14,10 @@ export default {
 <template>
   <div>
     <Header />
+    <strong>
+      <strong>Current route path:</strong>
+      {{ $route.fullPath }}
+    </strong>
     <RouterView />
     <Footer />
   </div>
