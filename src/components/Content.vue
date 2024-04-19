@@ -1,9 +1,3 @@
-<!--
-  todo
-1. get backend 
-2. finish index convert to show 
- -->
-
 <script>
 import axios from "axios";
 import ShowResume from "./ShowResume.vue";

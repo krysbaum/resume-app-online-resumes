@@ -7,7 +7,7 @@ import ShowResume from "./components/ShowResume.vue";
 const routes = [
   { path: "/", component: Content },
   { path: "/about", component: About },
-  { path: "/student/:student.id", component: ShowResume },
+  { path: "/students/1", component: ShowResume },
 ];
 
 const router = createRouter({
